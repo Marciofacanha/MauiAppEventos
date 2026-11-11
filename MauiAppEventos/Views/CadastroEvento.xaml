@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEventos.Views.CadastroEvento"
+             Title="Cadastro de Eventos"
+             BackgroundColor="{StaticResource Tertiary}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            
+
+            <Label Text="Nome do evento" 
+                   TextColor="White"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+            
+            <Entry x:Name="txt_nome" 
+                   Placeholder="Ex: PTCC Centro paula souza"
+                   WidthRequest="350"/>
+
+            <Label Text="Local do evento" 
+                   TextColor="White"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+            
+            <Entry x:Name="txt_local" 
+                   Placeholder="Ex: ETEC Itaquera II" 
+                   WidthRequest="350"
+                   />
+
+            <Label Text="Data de início" 
+                   TextColor="White"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+            
+            <DatePicker x:Name="dtpck_inicio"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        WidthRequest="350"/> 
+            
+
+            <Label Text="Data de término"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   TextColor="White"/>
+            
+            <DatePicker x:Name="dtpck_termino"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        WidthRequest="350"/>
+
+            <Label Text="Número de participantes"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   TextColor="White"/>
+            
+            <Entry x:Name="txt_participantes" 
+                   Keyboard="Numeric" 
+                   Placeholder="Ex: 50"
+                   HorizontalOptions="Center"
+                   WidthRequest="350"
+                   FontAttributes="Bold"
+                   />
+
+            <Label Text="Custo por participante (R$)"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="20"/>
+            
+            <Entry x:Name="txt_custo" 
+                   Keyboard="Numeric" 
+                   Placeholder="Ex: 25,50"
+                   WidthRequest="350"/>
+
+            <Button Text="Cadastrar evento" 
+                    Clicked="Button_Clicked"
+                    WidthRequest="200"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
